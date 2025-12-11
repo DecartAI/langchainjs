@@ -23,7 +23,7 @@ describe("DecartImageGeneration", () => {
           ok: true,
           arrayBuffer: () => Promise.resolve(MOCK_IMAGE_DATA.buffer),
           headers: new Headers({ "content-type": "image/png" }),
-        }) as Response
+        } as Response)
     );
   });
 
@@ -112,7 +112,7 @@ describe("DecartImageGeneration", () => {
           ok: false,
           status: 401,
           text: () => Promise.resolve("Unauthorized"),
-        }) as Response
+        } as Response)
     );
 
     const tool = new DecartImageGeneration({ apiKey: MOCK_API_KEY });
