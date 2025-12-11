@@ -1,5 +1,5 @@
-import { getEnvironmentVariable } from "@langchain/core/utils/env";
 import { Tool, type ToolParams } from "@langchain/core/tools";
+import { getEnvironmentVariable } from "@langchain/core/utils/env";
 
 /**
  * Parameters for the DecartImageGeneration tool.
@@ -119,9 +119,7 @@ export class DecartImageGeneration extends Tool {
 
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(
-        `Decart API error (${response.status}): ${errorText}`
-      );
+      throw new Error(`Decart API error (${response.status}): ${errorText}`);
     }
 
     // Response is binary image data
