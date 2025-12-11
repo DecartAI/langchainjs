@@ -11,6 +11,7 @@ import { DecartImageGeneration } from "../decart_image.js";
 const MOCK_API_KEY = "test-api-key";
 const MOCK_PROMPT = "A beautiful sunset over mountains";
 const MOCK_IMAGE_DATA = new Uint8Array([137, 80, 78, 71]); // PNG header bytes
+
 describe("DecartImageGeneration", () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let fetchMock: any;
